@@ -15,23 +15,30 @@ public class Layer {
     *
     */
     private double Vs;
-
     private double Vp;
     private double h;
     private double p;
     private double yogunluk;
     private double Gmax;
     private double E;
-    private double v;
-    private double K;
-    private double T;
-    private double Z;
     private double V;
+
+    public double getV() {
+        return V;
+    }
+
+    public void setV(double v) {
+        V = v;
+    }
+
+    private double K;
+    private double T=0;
+    private double Z;
 
     public Layer() {
     }
 
-    public Layer(double vs, double vp, double h, double p) {
+    public Layer(double vp, double vs, double h, double p) {
         this.Vs = vs;
         this.Vp = vp;
         this.h = h;
@@ -39,18 +46,18 @@ public class Layer {
     }
 
     public void hesap(double Vs2){
-        double yogunluk = (0.76)*Math.pow(Vp, (0.074))*Math.pow(Vs, (0.074));
-        double Gmax = yogunluk*Math.sqrt(Vs)/100;
+        this.yogunluk = (0.76)*Math.pow(Vp, (0.074))*Math.pow(Vs, (0.074));
+        this.Gmax = yogunluk*Math.sqrt(Vs)/100;
         this.E = (3*Gmax)*(Math.sqrt((Vp/Vs))-(4/3)/(Math.sqrt((Vp/Vs))-1));
         this.V=(Math.sqrt((Vp/Vs))-1)/(2*Math.sqrt((Vp/Vs))-2);
         this.K = Gmax*(Math.sqrt((Vp/Vs))-(4/3));
         this.T = 4*(h/Vs)+4*(50-h)/Vs2;
         this.Z = 1.67*Math.log((2.7*2500)/(yogunluk*Vs));
     }
-    
+
     public void hesap(){
-        double yogunluk = (0.76)*Math.pow(Vp, (0.074))*Math.pow(Vs, (0.074));
-        double Gmax = yogunluk*Math.sqrt(Vs)/100;
+        this.yogunluk = (0.76)*Math.pow(Vp, (0.074))*Math.pow(Vs, (0.074));
+        this.Gmax = yogunluk*Math.sqrt(Vs)/100;
         this.E = (3*Gmax)*(Math.sqrt((Vp/Vs))-(4/3)/(Math.sqrt((Vp/Vs))-1));
         this.V=(Math.sqrt((Vp/Vs))-1)/(2*Math.sqrt((Vp/Vs))-2);
         this.K = Gmax*(Math.sqrt((Vp/Vs))-(4/3));
@@ -113,14 +120,6 @@ public class Layer {
         E = e;
     }
 
-    public double getV() {
-        return v;
-    }
-
-    public void setV(double v) {
-        this.v = v;
-    }
-
     public double getK() {
         return K;
     }
@@ -155,7 +154,6 @@ public class Layer {
                 ", yogunluk=" + yogunluk +
                 ", Gmax=" + Gmax +
                 ", E=" + E +
-                ", v=" + v +
                 ", K=" + K +
                 ", T=" + T +
                 ", Z=" + Z +

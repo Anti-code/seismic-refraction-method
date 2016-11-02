@@ -52,8 +52,8 @@ class EntryAdapter extends ArrayAdapter<Entry> {
             itemlat.setText(String.valueOf(p.getLat()));
             itemlng.setText(String.valueOf(p.getLng()));
             TextView itemdate = (TextView) v.findViewById(R.id.itemdate);
-            Button map = (Button) v.findViewById(R.id.itemmap);
-            map.setOnClickListener(new View.OnClickListener() {
+
+            v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent i = new Intent(v.getContext(), MapsActivity.class);
@@ -63,6 +63,7 @@ class EntryAdapter extends ArrayAdapter<Entry> {
                     v.getContext().startActivity(i);
                 }
             });
+
         }
 
         return v;

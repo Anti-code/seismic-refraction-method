@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_margin="15dp"
+    tools:context="com.example.fool.mbu_sky.AddActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+    </android.support.design.widget.AppBarLayout>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:ems="10"
+        android:layout_below="@+id/Vs1"
+        android:layout_alignRight="@+id/Vs1"
+        android:layout_alignEnd="@+id/Vs1"
+        android:id="@+id/h1"
+        android:layout_width="match_parent"
+        android:hint="Tabaka Kalınlığı"
+        android:text="12" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:textAlignment="center"
+        android:layout_below="@+id/Vp2"
+        android:layout_alignRight="@+id/Vp2"
+        android:layout_alignEnd="@+id/Vp2"
+        android:id="@+id/Vs2"
+        android:layout_width="match_parent"
+        android:hint="Kayma Dalga Hızı"
+        android:text="12" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/Vs1"
+        android:layout_below="@+id/Vp1"
+        android:layout_alignLeft="@+id/Vp1"
+        android:layout_alignStart="@+id/Vp1"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:hint="Kayma Dalga Hızı"
+        android:text="12" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/p1"
+        android:layout_below="@+id/h1"
+        android:layout_alignLeft="@+id/h1"
+        android:layout_alignStart="@+id/h1"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:hint="Özdirenç Değeri"
+        android:text="12" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/h2"
+        android:layout_below="@+id/Vs2"
+        android:layout_alignLeft="@+id/Vs2"
+        android:layout_alignStart="@+id/Vs2"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:hint="Tabaka Kalınlığı"
+        android:text="12" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/p2"
+        android:layout_below="@+id/h2"
+        android:textAlignment="center"
+        android:layout_alignLeft="@+id/h2"
+        android:layout_alignStart="@+id/h2"
+        android:layout_width="match_parent"
+        android:hint="Özdirenç Değeri"
+        android:text="12" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/Vp1"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_toStartOf="@+id/save"
+        android:layout_below="@+id/textView3"
+        android:hint="Sıkışma Dalga Hızı"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="12" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/Vp2"
+        android:layout_width="match_parent"
+        android:layout_alignLeft="@+id/p1"
+        android:textAlignment="center"
+        android:layout_alignStart="@+id/p1"
+        android:layout_below="@+id/textView4"
+        android:hint="Sıkışma Dalga Hızı"
+        android:text="12" />
+
+    <TextView
+        android:text="2. Katman"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:layout_marginTop="31dp"
+        android:layout_below="@+id/p1"
+        android:textAlignment="center"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/save"
+        android:layout_width="64dp"
+        android:layout_height="58dp"
+        android:layout_gravity="bottom|end"
+        app:srcCompat="@android:drawable/ic_menu_save"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:textAlignment="center"
+        android:id="@+id/title"
+        android:hint="Başlık"
+        android:layout_below="@+id/appBarLayout2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="27dp"
+        android:text="Yeni Kayit" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:layout_marginTop="25dp"
+        android:text="1. Katman"
+        android:layout_below="@+id/title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
